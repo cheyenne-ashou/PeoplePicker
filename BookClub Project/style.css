@@ -1,0 +1,32 @@
+.success,
+.error {
+  color: white;
+  text-align: center;
+  margin: 5px 0 15px 0;
+  padding-left: 2rem;
+  border-radius: 5rem;
+}
+
+.success {
+  background: rgb(80, 141, 80);
+}
+.error {
+  background: rgb(183, 122, 122);
+}
+.delete {
+  text-decoration: none;
+}
+
+#draw-name {
+  background-color: black;
+  color: white;
+  transition-duration: 500ms;
+}
+
+#draw-name:hover {
+  background-color: white;
+  color: black;
+}
+h3 {
+  text-align: center;
+}
