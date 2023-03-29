@@ -59,11 +59,12 @@ class UI {
         setTimeout(myFunction, counter * factor);
         index = Math.floor(Math.random() * names.length);
         h3.textContent = `${names[index].firstName} ${names[index].lastName}`;
-        console.log("hello there");
       } else {
         const jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
-        console.log("under 0");
+        setTimeout(function () {
+          window.location.reload();
+        }, 8000);
       }
     };
 
@@ -152,10 +153,18 @@ document.getElementById("name-list").addEventListener("click", function (e) {
   e.preventDefault();
 });
 
+const drawNameUI = document.getElementById("draw-name");
+
 // Draw name event listener
-document.getElementById("draw-name").addEventListener("click", function (e) {
+drawNameUI.addEventListener("click", function (e) {
+  drawNameUI.disabled = true;
   const names = Store.getNames();
   const ui = new UI();
-  ui.pickName(names);
+  let namePicked = false;
+  namePicked = ui.pickName(names);
   e.preventDefault();
+  console.log(namePicked);
+  // if (namePicked === true) {
+  // window.location.reload();
+  // }
 });
