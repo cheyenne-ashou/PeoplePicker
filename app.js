@@ -51,7 +51,7 @@ class UI {
     let index;
     let counter = 0;
     let factor = 5;
-    let times = 70;
+    let times = 50;
     var myFunction = function () {
       counter++;
 
